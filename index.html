@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <header>
+            <h1>✊ Rock Paper Scissors ✌️</h1>
+            <p>Challenge the computer and become the champion!</p>
+        </header>
+
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+
+            <div class="score-box">
+                <h3>You</h3>
+                <span id="user-score">0</span>
+            </div>
+
+            <div class="score-box">
+                <h3>Computer</h3>
+                <span id="computer-score">0</span>
+            </div>
+
+        </div>
+
+        <!-- Winning Score -->
+        <div class="winning-score">
+
+            <label for="winning-score">
+                🏆 Select Winning Score:
+            </label>
+
+            <select id="winning-score">
+                <option value="3">3 Points</option>
+                <option value="5">5 Points</option>
+                <option value="10" selected>10 Points</option>
+                <option value="15">15 Points</option>
+                <option value="20">20 Points</option>
+            </select>
+
+        </div>
+
+        <!-- Player Choices -->
+        <h2>Choose Your Move</h2>
+
+        <div class="choices">
+
+            <button class="choice" data-choice="rock">
+                <span>✊</span>
+                <p>Rock</p>
+            </button>
+
+            <button class="choice" data-choice="paper">
+                <span>✋</span>
+                <p>Paper</p>
+            </button>
+
+            <button class="choice" data-choice="scissors">
+                <span>✌️</span>
+                <p>Scissors</p>
+            </button>
+
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="timer-box">
+
+            <h3>⏳ Computer Thinking Time</h3>
+
+            <div id="timer">02:00</div>
+
+            <p id="timer-message">
+                Select your move to start!
+            </p>
+
+        </div>
+
+        <!-- Battle Area -->
+        <div class="battle-area">
+
+            <div class="player">
+
+                <h3>You</h3>
+
+                <div id="user-choice" class="battle-icon">
+                    ❔
+                </div>
+
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div class="player">
+
+                <h3>Computer</h3>
+
+                <div id="computer-choice" class="battle-icon">
+                    ❔
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Result -->
+        <div class="result-area">
+
+            <h2 id="result">Make Your Move!</h2>
+
+            <p id="message">
+                Choose rock, paper, or scissors to start.
+            </p>
+
+        </div>
+
+        <!-- Reset -->
+        <button id="reset-btn">
+            🔄 Reset Game
+        </button>
+
+        <footer>
+            <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <!-- Result Modal -->
+    <div id="result-modal" class="modal">
+
+        <div class="modal-content">
+
+            <div id="modal-icon">🏆</div>
+
+            <h2 id="modal-title">You Win!</h2>
+
+            <p id="modal-message">
+                Great job!
+            </p>
+
+            <button id="close-modal">
+                Continue Playing
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
